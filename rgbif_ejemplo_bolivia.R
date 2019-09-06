@@ -27,6 +27,7 @@ keys <- lapply(list_sciNames, function(x) name_suggest(x, rank = "species"))%>%
 
 
 #descarga de gbif a partir de los key con los campos minimos(specie, key, decimallatitude, decimallongitude)
-bolivia.occ <- occ_search(taxonKey = keys, limit=50000, return="data", 
+bolivia.occ <- occ_search(taxonKey = keys, limit=2000, return="data", 
                           continent = c('south_america'), fields = 'minimal', hasCoordinate = TRUE)
-e
+
+##aca se puede cambiar el limite de records segun su manual se puede descargar un maximo de 200000
